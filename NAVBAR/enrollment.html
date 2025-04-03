@@ -9,6 +9,7 @@
 </head>
 <body>
     <nav class="navbar">
+        <div class="menu-toggle">☰</div>
         <div class="logo">
             <div class="icon"> &lt;/&gt; </div>
             <div class="brand">Code Master Technology</div>
@@ -21,7 +22,9 @@
             <li><a href="#">COURSES</a></li>
             <li><a href="contactus.html" class="contact">CONTACT US</a></li>
         </ul>
-
+        <div class="enroll">
+            <a href="enrollment.html" class="enrollbtn">Enroll now →</a>
+        </div>
     </nav>
 
     <div class="main">
@@ -31,9 +34,14 @@
                 <form>
                     <input type="text" placeholder="Full Name" required>
                     <input type="text" placeholder="Father's Name" required>
-                    <input type="text" placeholder="Date of Birth" required>
-                    <input type="text" placeholder="Gender" required>
-                    <input type="text" placeholder="Phone Number" required>
+                    <input type="date" placeholder="Date of Birth" required>
+                    <select required>
+                        <option value="" disabled selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="tel" placeholder="Phone Number" required>
                     <input type="email" placeholder="Email Address" required>
                 </form>
             </div>
@@ -43,14 +51,37 @@
             <div class="contact-form">
                 <h2>Course Details</h2>
                 <form>
-                    <input type="text" placeholder="Course Name" required>
-                    <input type="text" placeholder="Preferred Batch Timing" required>
-                    <input type="text" placeholder="Previous Coding Experience" required>
+                    <select required>
+                        <option value="" disabled selected>Course Name</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="web-design">Web Designing</option>
+                        <option value="mobile-app">Mobile App Development</option>
+                        <option value="programming">Programming Languages</option>
+                    </select>
+                    <select required>
+                        <option value="" disabled selected>Preferred Batch Timing</option>
+                        <option value="morning">Morning (9AM-12PM)</option>
+                        <option value="afternoon">Afternoon (1PM-4PM)</option>
+                        <option value="evening">Evening (5PM-8PM)</option>
+                    </select>
+                    <select required>
+                        <option value="" disabled selected>Previous Coding Experience</option>
+                        <option value="none">None</option>
+                        <option value="beginner">Beginner (1-6 months)</option>
+                        <option value="intermediate">Intermediate (6-12 months)</option>
+                        <option value="advanced">Advanced (1+ years)</option>
+                    </select>
                     <textarea placeholder="Why do you want to join?" rows="4" required></textarea>
-                    <button type="submit" style="background-color: rgb(0, 0, 0);">ENROLL NOW</button>
+                    <button type="submit">ENROLL NOW</button>
                 </form>
             </div>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.submenu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
