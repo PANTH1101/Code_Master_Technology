@@ -18,7 +18,7 @@ html, body {
     padding: 15px 40px;
     background: white;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    height: 90px;
+    height: 81px;
     position: relative;
 }
 
@@ -485,6 +485,9 @@ button:hover {
         width: 90%;
     }
     
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
     
     .review-section {
         padding: 20px;
