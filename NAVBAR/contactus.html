@@ -9,6 +9,7 @@
 </head>
 <body>
     <nav class="navbar">
+        <div class="menu-toggle">☰</div>
         <div class="logo">
             <div class="icon"> &lt;/&gt; </div>
             <div class="brand">Code Master Technology</div>
@@ -22,7 +23,7 @@
             <li><a href="#" class="contact">CONTACT US</a></li>
         </ul>
         <div class="enroll">
-            <a href="enrollment.html" class="enrollbtn" style="font-size: 20px;">Enroll now →</a>
+            <a href="enrollment.html" class="enrollbtn">Enroll now →</a>
         </div>
     </nav>
 
@@ -99,5 +100,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.submenu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
