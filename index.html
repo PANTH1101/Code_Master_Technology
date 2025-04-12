@@ -5,39 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Master Technology</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     
-    <!-- <div class="menu">
-            <div class="leftbar">
-                <h1>CODE MASTER TECHNOLOGY</h1>
-            </div>
-            <div class="rightbar">
-                <a href="#"><div class="submenu">Home</div></a>
-                <a href="about.html"><div class="submenu">About</div></a>
-                <a href="benefits.html"><div class="submenu">Benefits</div></a>
-                <a href="enrollform.html"><div class="submenu">Enroll Now</div></a>
-            </div>
-        </div> -->
-
     <div class="main">
         <nav class="navbar">
-            <div class="menu-toggle">☰</div>
             <div class="logo">
-                <div class="icon"> &lt;/&gt; </div>
+                <div class="icon">&lt;/&gt;</div>
                 <div class="brand">Code Master Technology</div>
             </div>
             <ul class="submenu">
                 <li><a href="#" class="home">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="NAVBAR/aboutus.html">ABOUT</a></li>
+                <li><a href="NAVBAR/benefits.html">BENEFITS</a></li>
                 <li><a href="#">REVIEWS</a></li>
                 <li><a href="#courses">COURSES</a></li>
                 <li><a href="NAVBAR/contactus.html">CONTACT US</a></li>
             </ul>
             <div class="enroll">
-                <a href="NAVBAR/enrollment.html" class="enrollbtn" style="font-size: 20px;">Enroll now →</a>
+                <a href="NAVBAR/enrollment.html" class="enrollbtn">Enroll now →</a>
             </div>
+            <div class="menu-toggle">☰</div>
         </nav>
 
         <div class="header">
@@ -125,7 +114,7 @@
                             <li>➜ Mobile Technology</li>
                         </ul>
                     </div>
-                    <a href="#" class="read-more"><button>Read More</button></a>
+                    <a href="NAVBAR/aboutus.html" class="read-more"><button>Read More</button></a>
                 </div>
             </div>
         </div>
@@ -177,11 +166,13 @@
         <div class="copyright">
             © Codemastertechnology, All Right Reserved. Designed By <strong>Panth Chauhan</strong>
         </div>
+    </div>
 
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.submenu').classList.toggle('active');
+            document.querySelector('.enroll').classList.toggle('active');
         });
     </script>
 </body>
-</html> 
+</html>
