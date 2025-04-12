@@ -2,23 +2,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 html, body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 15px 40px;
     background: white;
+    height: 110px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    height: 81px;
     position: relative;
 }
 
@@ -47,19 +48,25 @@ html, body {
     text-decoration: none;
     font-size: 20px;
     color: black;
+    transition: color 0.3s;
+}
+
+.submenu .home {
+    color: #00bcd4;
 }
 
 .enrollbtn {
     text-decoration: none;
     background: #00bcd4;
     color: white;
-    padding: 20px 20px;
+    padding: 15px 25px;
     border-radius: 5px;
     font-weight: bold;
+    transition: background 0.3s;
 }
 
-.submenu .home {
-    color: #00bcd4;
+.enrollbtn:hover {
+    background: #008fa1;
 }
 
 .menu-toggle {
@@ -81,6 +88,7 @@ html, body {
 }
 
 .header-text {
+    margin-top: 25px;
     position: absolute;
     top: 60%;
     left: 40%;
@@ -151,7 +159,7 @@ button:hover {
 }
 
 .box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .box .header .text {
@@ -328,6 +336,7 @@ button:hover {
     border-top: 1px solid #333;
 }
 
+/* Responsive Styles */
 @media (max-width: 1200px) {
     .header-text {
         left: 20px;
@@ -398,19 +407,25 @@ button:hover {
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 10px 15px;
+        padding: 15px 20px;
         height: auto;
     }
     
     .menu-toggle {
         display: block;
+        order: 1;
+    }
+    
+    .logo {
+        order: 0;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
     }
     
     .submenu {
         position: absolute;
-        top: 100%;
+        top: 110px;
         left: 0;
         width: 100%;
         background: white;
@@ -433,15 +448,15 @@ button:hover {
     }
     
     .enroll {
-        position: absolute;
-        right: 15px;
-        top: 15px;
+        order: 2;
+        margin-left: auto;
     }
     
     .header-text {
         text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
         padding: 0 20px;
-        margin-top: 50px;
     }
     
     .header-text h1 {
@@ -462,10 +477,6 @@ button:hover {
         width: 100%;
         margin-bottom: 30px;
     }
-    
-    .gallery {
-        grid-template-columns: repeat(4, 1fr);
-    }
 }
 
 @media (max-width: 576px) {
@@ -485,10 +496,6 @@ button:hover {
         width: 90%;
     }
     
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
     .review-section {
         padding: 20px;
     }
@@ -499,5 +506,14 @@ button:hover {
     
     .review-content p {
         font-size: 16px;
+    }
+    
+    .enrollbtn {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    
+    .logo {
+        font-size: 24px;
     }
 }
