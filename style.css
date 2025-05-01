@@ -55,6 +55,10 @@ html, body {
     color: #00bcd4;
 }
 
+.submenu a:hover {
+    color: #00bcd4;
+}
+
 .enrollbtn {
     text-decoration: none;
     background: #00bcd4;
